@@ -2,10 +2,10 @@
 ![Alt text](https://pbs.twimg.com/media/CFYYWy6UEAE9Ow-.png)
 ***
 ## This is a README.md for the repository 0x19. C - Stacks, Queues - LIFO, FIFO
-```
+
 For Holberton School
 Cohort 16.
-```
+
 ### General
 * What do LIFO and FIFO mean
 * What is a stack, and when to use it
@@ -16,7 +16,7 @@ Cohort 16.
 
 ### More Info
 
-
+```
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -32,8 +32,8 @@ typedef struct stack_s
         struct stack_s *prev;
         struct stack_s *next;
 } stack_t;```
-
 ```
+And
 
 ```
 /**
