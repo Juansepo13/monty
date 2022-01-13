@@ -8,7 +8,6 @@
  */
 int get_opcode(const char *opcode, stack_t **stack, unsigned int line_number)
 {
-
 	int i = 0;
 
 	instruction_t opcode_list[] = {
@@ -22,6 +21,7 @@ int get_opcode(const char *opcode, stack_t **stack, unsigned int line_number)
 	};
 
 	int size = sizeof(opcode_list) / sizeof(instruction_t);
+
 	while (i < size)
 	{
 		if (strcmp(opcode, opcode_list[i].opcode) == 0)
