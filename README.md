@@ -16,7 +16,8 @@ Cohort 16.
 
 ### More Info
 
-```/**
+```
+/**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
  * @prev: points to the previous element of the stack (or queue)
@@ -30,12 +31,12 @@ typedef struct stack_s
         int n;
         struct stack_s *prev;
         struct stack_s *next;
-} stack_t;```
+} stack_t;
 
 
 And
 
-```/**
+/**
 * struct instruction_s - opcode and its function
 * @opcode: the opcode
 * @f: function to handle the opcode
@@ -47,8 +48,8 @@ And
        {
                char *opcode;
                void (*f)(stack_t **stack, unsigned int line_number);
-} instruction_t;```
-
+} instruction_t;
+```
 
 ## Files included
 
