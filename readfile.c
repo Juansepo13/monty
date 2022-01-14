@@ -13,7 +13,6 @@ void readfile(FILE *fp)
 	char *opcode = NULL;
 	stack_t *stack = NULL;
 
-
 	while (getline(&buffer, &size, fp) != -1)
 	{
 		line_n++;
@@ -27,6 +26,12 @@ void readfile(FILE *fp)
 		if (strcmp(opcode, "push") == 0)
 		{
 			push_value = strtok(NULL, DELIM);
+			if (push_value == NULL)
+			{
+				fprintf(stderr,"L%d: usage: push integer\n", line_n);
+				exit(EXIT_FAILURE);
+			}
+
 			if (push_validate(push_value, line_n) == true)
 			{
 				push_int = atoi(push_value);
