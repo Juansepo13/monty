@@ -1,7 +1,6 @@
 #include "monty.h"
 /**
  * readfile - read a monty file
- * @fp: file pointer
  */
 
 void readfile(void)
@@ -17,10 +16,8 @@ void readfile(void)
 	{
 		line_n++;
 		opcode = strtok(buffer, DELIM);
-
 		if (opcode == NULL)
 			continue;
-
 		if (strchr(opcode, '#') != NULL)
 			continue;
 		if (strcmp(opcode, "push") == 0)
@@ -29,12 +26,9 @@ void readfile(void)
 			if (push_value == NULL)
 			{
 				fprintf(stderr, "L%d: usage: push integer\n", line_n);
-				free_stack(stack);
-				free(buffer);
-				fclose(globales.fp);
+				free_stack(stack), free(buffer), fclose(globales.fp);
 				exit(EXIT_FAILURE);
 			}
-
 			if (push_validate(push_value, line_n) == true)
 			{
 				push_int = atoi(push_value);

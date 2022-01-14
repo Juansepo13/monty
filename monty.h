@@ -42,6 +42,7 @@ typedef struct instruction_s
 /**
  * struct glovar - global variable structs
  * @stackorqueue: value to switch between modes
+ * @fp: File descriptor.
  * Description: global variables to switch mode
  */
 typedef struct glovar
