@@ -55,11 +55,17 @@ And
 
 | File                 | Details                                    |
 |--------------------- | ------------------------------------------ |
-| [](./a) |	       |
-| [](./b) |	       |
-| [](./c) |	       |
-| [](./)  |	       |
-| [](./)  |	       |
+| [addfunc.c](https://github.com/Juansepo13/monty/blob/main/addfunc.c) | Adds top two elements of the stacks|
+| [freestack.c](https://github.com/Juansepo13/monty/blob/main/freestack.c) | Function to free the stack|
+| [get_functions.c](https://github.com/Juansepo13/monty/blob/main/get_functions.c) | Get the opcode object|
+| [lllength.c](https://github.com/Juansepo13/monty/blob/main/lllength.c)  | Linked list length |
+| [monty.c](https://github.com/Juansepo13/monty/blob/main/monty.c)  | Main function|
+| [monty.h](https://github.com/Juansepo13/monty/blob/main/monty.h)  | Header|
+| [opcodes_func.c](https://github.com/Juansepo13/monty/blob/main/opcodes_func.c)  | Adds a new node at the beginning of a stack_t list.|
+| [opcodes_func1.c](https://github.com/Juansepo13/monty/blob/main/opcodes_func1.c)  | Swaps the top two elements of the stack|
+| [readfile.c](https://github.com/Juansepo13/monty/blob/main/readfile.c)  | read a monty file|
+| [testbool.c](https://github.com/Juansepo13/monty/blob/main/testbool.c)  | validation for int value to push|
+
 
 ### Author
 ***
