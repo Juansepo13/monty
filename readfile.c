@@ -28,7 +28,7 @@ void readfile(FILE *fp)
 			push_value = strtok(NULL, DELIM);
 			if (push_value == NULL)
 			{
-				fprintf(stderr,"L%d: usage: push integer\n", line_n);
+				fprintf(stderr, "L%d: usage: push integer\n", line_n);
 				exit(EXIT_FAILURE);
 			}
 
