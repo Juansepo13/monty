@@ -4,7 +4,7 @@
  * @fp: file pointer
  */
 
-void readfile(FILE *fp)
+void readfile(void)
 {
 	char *buffer = NULL, *push_value = NULL;
 	size_t size = 0;
@@ -13,7 +13,7 @@ void readfile(FILE *fp)
 	char *opcode = NULL;
 	stack_t *stack = NULL;
 
-	while (getline(&buffer, &size, fp) != -1)
+	while (getline(&buffer, &size, globales.fp) != -1)
 	{
 		line_n++;
 		opcode = strtok(buffer, DELIM);
@@ -29,6 +29,9 @@ void readfile(FILE *fp)
 			if (push_value == NULL)
 			{
 				fprintf(stderr, "L%d: usage: push integer\n", line_n);
+				free_stack(stack);
+				free(buffer);
+				fclose(globales.fp);
 				exit(EXIT_FAILURE);
 			}
 
@@ -43,4 +46,6 @@ void readfile(FILE *fp)
 			get_opcode(opcode, &stack, line_n);
 		}
 	}
+	free_stack(stack);
+	free(buffer);
 }

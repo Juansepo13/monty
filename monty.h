@@ -44,12 +44,15 @@ typedef struct instruction_s
  * @stackorqueue: value to switch between modes
  * Description: global variables to switch mode
  */
-struct glovar
+typedef struct glovar
 {
+	FILE *fp;
 	int stackorqueue;
 } glovar_t;
 
-void readfile(FILE *fp);
+glovar_t globales;
+
+void readfile(void);
 bool push_validate(char *push_value, int line_n);
 int get_opcode(const char *opcode, stack_t **stack, unsigned int line_number);
 void free_stack(stack_t *stack);
