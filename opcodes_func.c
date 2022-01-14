@@ -1,3 +1,4 @@
+./monty bytecodes/00.m
 #include "monty.h"
 /**
  * push - Adds a new node at the beginning of a stack_t list.
